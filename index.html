@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AkhlakDigital – Media Pembelajaran Akhlak di Era Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ======= NAVBAR (Layer 1) ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-icon"><i class="fas fa-mosque"></i></span>
+        <div class="brand-text">
+          <span class="brand-main">AkhlakDigital</span>
+          <span class="brand-sub">Media Pembelajaran Islam</span>
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" onclick="navigate('home')">Beranda</a></li>
+        <li><a href="#materi" class="nav-link" onclick="navigate('materi')">Materi</a></li>
+        <li><a href="#kuis" class="nav-link kuis-nav" onclick="navigate('kuis')">Kuis</a></li>
+        <li><a href="#tentang" class="nav-link" onclick="navigate('tentang')">Tentang</a></li>
+        <li><a href="#kontak" class="nav-link" onclick="navigate('kontak')">Kontak</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" title="Mode Gelap"><i class="fas fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= PAGE: HOME ======= -->
+  <div id="page-home" class="page active">
+
+    <!-- Layer 2: Hero Section -->
+    <section class="hero">
+      <div class="hero-bg-pattern"></div>
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-star-and-crescent"></i> Bismillahirrahmanirrahim</div>
+        <h1 class="hero-title">Membangun <span class="highlight">Akhlak Mulia</span><br/>di Era Digital</h1>
+        <p class="hero-subtitle">
+          Platform pembelajaran Islam terpadu — mengintegrasikan nilai-nilai Al-Qur'an dan Hadist
+          sebagai panduan berperilaku di dunia maya yang penuh tantangan.
+        </p>
+        <div class="hero-ayat">
+          <div class="ayat-icon"><i class="fas fa-quran"></i></div>
+          <div class="ayat-text">
+            <p class="arabic">إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ</p>
+            <p class="translation">"Sesungguhnya aku diutus hanya untuk menyempurnakan kemuliaan akhlak."<br/><em>– HR. Al-Baihaqi</em></p>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="navigate('materi')"><i class="fas fa-book-open"></i> Mulai Belajar</button>
+          <button class="btn-secondary" onclick="navigate('tentang')"><i class="fas fa-info-circle"></i> Pelajari Lebih</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <img src="https://placehold.co/480x360/e8f5e9/2e7d32?text=Pembelajaran+Akhlak" alt="Pembelajaran Akhlak" class="hero-img"/>
+          <div class="hero-badge-float badge-1"><i class="fas fa-users"></i> Komunitas Pelajar</div>
+          <div class="hero-badge-float badge-2"><i class="fas fa-quran"></i> Berbasis Al-Qur'an</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 3: Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-book"></i></div>
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Materi Pembelajaran</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-quran"></i></div>
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Ayat & Hadist</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="stat-number">5</div>
+            <div class="stat-label">Topik Utama</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-heart"></i></div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Gratis & Terbuka</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 4: Featured Topics -->
+    <section class="topics-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Topik Utama</span>
+          <h2 class="section-title">Akhlak yang Harus Dijaga<br/>di Era Digital</h2>
+          <p class="section-desc">Lima pilar akhlak Islami yang menjadi fondasi dalam berinteraksi di dunia maya</p>
+        </div>
+        <div class="topics-grid">
+          <div class="topic-card" onclick="openDetail(0)">
+            <div class="topic-icon" style="background:#e8f5e9;color:#2e7d32"><i class="fas fa-comment-slash"></i></div>
+            <h3>Menjaga Lisan Digital</h3>
+            <p>Etika berkomunikasi di media sosial sesuai tuntunan Islam</p>
+            <span class="topic-tag">Komunikasi</span>
+          </div>
+          <div class="topic-card" onclick="openDetail(1)">
+            <div class="topic-icon" style="background:#f1f8e9;color:#558b2f"><i class="fas fa-eye-slash"></i></div>
+            <h3>Menjaga Pandangan</h3>
+            <p>Mengelola konten yang dikonsumsi di dunia digital</p>
+            <span class="topic-tag">Konsumsi Konten</span>
+          </div>
+          <div class="topic-card" onclick="openDetail(2)">
+            <div class="topic-icon" style="background:#e8f5e9;color:#1b5e20"><i class="fas fa-shield-alt"></i></div>
+            <h3>Amanah & Kejujuran</h3>
+            <p>Integritas dalam dunia digital — menghindari hoaks dan plagiarisme</p>
+            <span class="topic-tag">Integritas</span>
+          </div>
+          <div class="topic-card" onclick="openDetail(3)">
+            <div class="topic-icon" style="background:#f9fbe7;color:#827717"><i class="fas fa-handshake"></i></div>
+            <h3>Ukhuwah Islamiyah</h3>
+            <p>Membangun persaudaraan dan menghindari perpecahan online</p>
+            <span class="topic-tag">Sosial</span>
+          </div>
+          <div class="topic-card" onclick="openDetail(4)">
+            <div class="topic-icon" style="background:#e8f5e9;color:#2e7d32"><i class="fas fa-clock"></i></div>
+            <h3>Manajemen Waktu Islami</h3>
+            <p>Menggunakan teknologi dengan bijak tanpa melalaikan ibadah</p>
+            <span class="topic-tag">Produktivitas</span>
+          </div>
+          <div class="topic-card cta-card">
+            <div class="topic-icon" style="background:#2e7d32;color:#fff"><i class="fas fa-arrow-right"></i></div>
+            <h3>Lihat Semua Materi</h3>
+            <p>Jelajahi seluruh konten pembelajaran akhlak digital kami</p>
+            <button class="btn-primary btn-sm" onclick="navigate('materi')">Lihat Semua</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 5: Quran Section -->
+    <section class="quran-section">
+      <div class="container">
+        <div class="section-header light">
+          <span class="section-tag light">Firman Allah & Sabda Nabi</span>
+          <h2 class="section-title light">Landasan Akhlak dari Al-Qur'an & Hadist</h2>
+        </div>
+        <div class="quran-grid">
+          <div class="quran-card">
+            <div class="quran-source"><i class="fas fa-quran"></i> Al-Qur'an · Al-Hujurat: 11</div>
+            <p class="arabic-lg">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا يَسْخَرْ قَوْمٌ مِّن قَوْمٍ</p>
+            <p class="quran-trans">"Wahai orang-orang yang beriman, janganlah suatu kaum mengolok-olok kaum yang lain..."</p>
+            <div class="quran-relevance"><i class="fas fa-link"></i> Relevansi: Larangan cyberbullying & body shaming</div>
+          </div>
+          <div class="quran-card">
+            <div class="quran-source"><i class="fas fa-mosque"></i> Hadist · HR. Muslim</div>
+            <p class="arabic-lg">مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ</p>
+            <p class="quran-trans">"Barangsiapa beriman kepada Allah dan hari akhir, hendaklah ia berkata baik atau diam."</p>
+            <div class="quran-relevance"><i class="fas fa-link"></i> Relevansi: Etika berkomentar di media sosial</div>
+          </div>
+          <div class="quran-card">
+            <div class="quran-source"><i class="fas fa-quran"></i> Al-Qur'an · Al-Isra: 36</div>
+            <p class="arabic-lg">وَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِ عِلْمٌ</p>
+            <p class="quran-trans">"Dan janganlah kamu mengikuti sesuatu yang tidak kamu ketahui..."</p>
+            <div class="quran-relevance"><i class="fas fa-link"></i> Relevansi: Tabayyun sebelum menyebar informasi (anti-hoaks)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 6: Why Section -->
+    <section class="why-section">
+      <div class="container why-grid">
+        <div class="why-image">
+          <img src="https://placehold.co/500x420/c8e6c9/1b5e20?text=Islam+%26+Digital" alt="Islam Digital" />
+          <div class="why-decor"></div>
+        </div>
+        <div class="why-content">
+          <span class="section-tag">Mengapa Penting?</span>
+          <h2 class="section-title">Islam Hadir di Setiap<br/>Zaman dan Tempat</h2>
+          <p class="why-desc">Perkembangan teknologi digital tidak bisa dipisahkan dari kehidupan umat Islam modern. Kita perlu panduan yang jelas agar tetap berakhlak mulia di tengah arus informasi yang deras.</p>
+          <div class="why-points">
+            <div class="why-point"><div class="point-icon"><i class="fas fa-check"></i></div><div><strong>Berbasis Dalil</strong><p>Setiap materi dilengkapi ayat Al-Qur'an dan Hadist yang relevan</p></div></div>
+            <div class="why-point"><div class="point-icon"><i class="fas fa-check"></i></div><div><strong>Kontekstual & Modern</strong><p>Disesuaikan dengan tantangan nyata di era digital saat ini</p></div></div>
+            <div class="why-point"><div class="point-icon"><i class="fas fa-check"></i></div><div><strong>Mudah Dipahami</strong><p>Disajikan dengan bahasa yang sederhana dan mudah dipraktikkan</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 7: CTA Banner -->
+    <section class="cta-banner">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Mulai Perjalanan Belajarmu Hari Ini</h2>
+          <p>Perkuat akhlak digitalmu dengan panduan Al-Qur'an dan Hadist</p>
+        </div>
+        <button class="btn-white" onclick="navigate('materi')"><i class="fas fa-book-open"></i> Lihat Semua Materi</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ======= PAGE: MATERI ======= -->
+  <div id="page-materi" class="page">
+
+    <!-- Layer 8: Materi Header -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-tag light">Koleksi Pembelajaran</span>
+        <h1>Materi & Artikel</h1>
+        <p>Kumpulan materi akhlak Islami yang kontekstual untuk kehidupan digital</p>
+      </div>
+    </section>
+
+    <!-- Layer 9: Filter & Search -->
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Cari materi..." oninput="filterMateri()"/>
+          </div>
+          <div class="filter-tags">
+            <button class="filter-btn active" onclick="filterByTag('semua', this)">Semua</button>
+            <button class="filter-btn" onclick="filterByTag('komunikasi', this)">Komunikasi</button>
+            <button class="filter-btn" onclick="filterByTag('konten', this)">Konten</button>
+            <button class="filter-btn" onclick="filterByTag('integritas', this)">Integritas</button>
+            <button class="filter-btn" onclick="filterByTag('sosial', this)">Sosial</button>
+            <button class="filter-btn" onclick="filterByTag('produktivitas', this)">Produktivitas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 10: Materi Grid -->
+    <section class="materi-section">
+      <div class="container">
+        <div class="materi-grid" id="materiGrid"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ======= PAGE: DETAIL MATERI ======= -->
+  <div id="page-detail" class="page">
+
+    <!-- Layer 11: Detail Content -->
+    <section class="detail-page">
+      <div class="container">
+        <button class="back-btn" onclick="navigate('materi')"><i class="fas fa-arrow-left"></i> Kembali ke Materi</button>
+        <div class="detail-layout">
+          <div class="detail-main" id="detailContent"></div>
+          <div class="detail-sidebar">
+            <div class="sidebar-card">
+              <h4><i class="fas fa-list"></i> Materi Lainnya</h4>
+              <ul class="sidebar-list" id="sidebarList"></ul>
+            </div>
+            <div class="sidebar-card quran-sidebar">
+              <h4><i class="fas fa-quran"></i> Ayat Terkait</h4>
+              <div id="sidebarAyat"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ======= PAGE: TENTANG ======= -->
+  <div id="page-tentang" class="page">
+
+    <!-- Layer 12: About Hero -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-tag light">Profil Web</span>
+        <h1>AkhlakDigital Web</h1>
+        <p>Mengenal lebih dekat visi, misi, dan tujuan platform pembelajaran ini</p>
+      </div>
+    </section>
+
+    <!-- Layer 13: About Content -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="https://placehold.co/480x400/e8f5e9/2e7d32?text=Tujuan+Web" alt="Tujuan Web"/>
+            <div class="about-decor"></div>
+          </div>
+          <div class="about-content">
+            <span class="section-tag">Latar Belakang</span>
+            <h2>Dibuat untuk kebutuhan nyata umat islam</h2>
+            <p>Web AkhlakDigital hadir sebagai respons atas tantangan nyata yang dihadapi umat Islam di era digital. Maraknya hoaks, ujaran kebencian, cyberbullying, dan konten negatif yang meracuni akhlak kita.</p>
+            <p>Saya percaya bahwa Islam memiliki jawaban atas setiap persoalan zaman, karena islam memang relevan untuk setiap zaman termasuk masalah dunia digital. Dengan merujuk pada Al-Qur'an dan Hadist, setiap materi dalam Web ini disajikan secara praktis dan aplikatif.</p>
+            <div class="about-quote">
+              <i class="fas fa-quote-left"></i>
+              <p class="arabic">وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ</p>
+              <p>"Dan sesungguhnya engkau benar-benar berbudi pekerti yang agung." — QS. Al-Qalam: 4</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 14: Vision Mission -->
+        <div class="visi-misi">
+          <div class="vm-card">
+            <div class="vm-icon"><i class="fas fa-eye"></i></div>
+            <h3>Visi</h3>
+            <p>Menjadi platform referensi utama pembelajaran akhlak Islami di era digital yang terpercaya, mudah diakses, dan berlandaskan Al-Qur'an dan Hadist.</p>
+          </div>
+          <div class="vm-card">
+            <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Misi</h3>
+            <ul>
+              <li>Menyajikan materi akhlak digital berbasis dalil yang sahih</li>
+              <li>Membantu umat beradaptasi dengan teknologi tanpa kehilangan identitas Islam</li>
+              <li>Membangun komunitas pelajar yang saling mengingatkan dalam kebaikan</li>
+            </ul>
+          </div>
+          <div class="vm-card">
+            <div class="vm-icon"><i class="fas fa-heart"></i></div>
+            <h3>Keunggulan</h3>
+            <ul>
+              <li><strong>Ilmiah</strong> — Berbasis sumber yang sahih</li>
+              <li><strong>Tawazun</strong> — Seimbang antara dunia dan akhirat</li>
+              <li><strong>Inklusif</strong> — Untuk semua kalangan umat Islam</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Layer 15: Team Section -->
+        <div class="team-section">
+          <div class="section-header">
+            <span class="section-tag">Developer</span>
+            <h2 class="section-title">Semoga terbantu dengan web ini</h2>
+          </div>
+          <div class="team-grid team-single">
+            <div class="team-card">
+              <img src="https://placehold.co/120x120/c8e6c9/1b5e20?text=KG" alt="Ken Gayuh" class="team-photo"/>
+              <h4>Ken Gayuh Nusa Islami</h4>
+              <span>Pengembang Web</span>
+              <p>Perancang web akhlak digital sebagai pembelajaran umat Islam</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ======= PAGE: KONTAK ======= -->
+  <div id="page-kontak" class="page">
+
+    <!-- Layer 16: Contact Hero -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-tag light">Hubungi selalu</span>
+        <h1>Kontak</h1>
+        <p>Ada pertanyaan, saran, atau ingin berkolaborasi?</p>
+      </div>
+    </section>
+
+    <!-- Layer 17: Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            <p>Jangan ragu untuk menghubungi kami. Kami akan merespons dalam 1x24 jam, insya Allah.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div><strong>Alamat</strong><p>Jl. Markum, Ponorogo</p></div>
+              </div>
+              <div class="contact-item">
+                <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                <div><strong>Email</strong><p>kengayuh@gmail</p></div>
+              </div>
+              <div class="contact-item">
+                <div class="c-icon"><i class="fas fa-phone"></i></div>
+                <div><strong>Telepon</strong><p>+62 800-0000-0000</p></div>
+              </div>
+              <div class="contact-item">
+                <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+                <div><strong>WhatsApp</strong><p>+62 800-0000-0000</p></div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="contact-form-wrap">
+            <div class="contact-form">
+              <h3>Kirim Pesan</h3>
+              <p class="gform-note"><i class="fas fa-shield-alt"></i> Pesan Anda akan tersimpan langsung di Google Drive kami.</p>
+              <div class="gform-wrapper">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSd4hRkWMdR_UORHZp0fPg0MfE4J0HXWBruJl4jsbpzV4dYp0g/viewform?embedded=true"
+                  width="100%"
+                  height="855"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                  style="border-radius:10px;">
+                  Memuat…
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ======= PAGE: KUIS ======= -->
+  <div id="page-kuis" class="page">
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-tag light">Kuis Belajar</span>
+        <h1>Kuis Untuk melatih pemahaman</h1>
+        <p>Jawablah 10 pertanyaan berikut ini untuk mengasah pemahamanmu</p>
+      </div>
+    </section>
+    <section class="kuis-section">
+      <div class="container">
+        <div class="kuis-wrap">
+          <div id="kuis-intro" class="kuis-screen active">
+            <div class="kuis-intro-card">
+              <div class="kuis-intro-icon"><i class="fas fa-clipboard-check"></i></div>
+              <h2>Mulai Kuis!</h2>
+              <p>Kuis ini terdiri dari <strong>10 pertanyaan</strong> seputar materi akhlak di era digital. Seeprti hoaks, privasi, dan etika online.</p>
+              <div class="kuis-intro-meta">
+                <span><i class="fas fa-question-circle"></i> 10 Soal</span>
+                <span><i class="fas fa-clock"></i> &plusmn;5 Menit</span>
+                <span><i class="fas fa-medal"></i> Hasil diakhir</span>
+              </div>
+              <div class="kuis-intro-ayat">
+                <p class="arabic">فَاسْأَلُوا أَهْلَ الذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ</p>
+                <p>"Maka bertanyalah kepada orang yang mempunyai pengetahuan jika kamu tidak mengetahui." &mdash; QS. An-Nahl: 43</p>
+              </div>
+              <button class="btn-primary" onclick="startKuis()"><i class="fas fa-play"></i> Mulai Kuis</button>
+            </div>
+          </div>
+          <div id="kuis-soal" class="kuis-screen">
+            <div class="kuis-progress-bar">
+              <div class="kuis-progress-track"><div class="kuis-progress-fill" id="progressFill"></div></div>
+              <span class="kuis-progress-label" id="progressLabel">1 / 10</span>
+            </div>
+            <div class="kuis-card" id="kuisCard"></div>
+          </div>
+          <div id="kuis-hasil" class="kuis-screen">
+            <div class="kuis-hasil-card" id="hasilCard"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======= FOOTER (Layer 18) ======= -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <span class="brand-icon"><i class="fas fa-mosque"></i></span>
+            <div class="brand-text">
+              <span class="brand-main" style="color:#fff">AkhlakDigital</span>
+              <span class="brand-sub" style="color:#a5d6a7">Media Pembelajaran Islam</span>
+            </div>
+          </div>
+          <p class="footer-desc">Platform edukasi akhlak Islami yang membantu umat beradaptasi di era digital dengan tetap berpegang pada Al-Qur'an dan Hadist.</p>
+          <p class="footer-ayat arabic-sm">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#" onclick="navigate('home')">Beranda</a></li>
+            <li><a href="#" onclick="navigate('materi')">Materi</a></li>
+            <li><a href="#" onclick="navigate('kuis')">Kuis Akhlak</a></li>
+            <li><a href="#" onclick="navigate('tentang')">Tentang Kami</a></li>
+            <li><a href="#" onclick="navigate('kontak')">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Topik</h4>
+          <ul>
+            <li><a href="#">Menjaga Lisan Digital</a></li>
+            <li><a href="#">Menjaga Pandangan</a></li>
+            <li><a href="#">Amanah & Kejujuran</a></li>
+            <li><a href="#">Ukhuwah Islamiyah</a></li>
+            <li><a href="#">Manajemen Waktu</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Ikuti Kami</h4>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Akhlak Digital Web</p>
+        <p>Semoga selalu dijalan yang benar Amin.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" title="Kembali ke Atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
